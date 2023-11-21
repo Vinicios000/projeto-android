@@ -1,0 +1,234 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:ital,wght@1,900&display=swap'); /*fonte inportada do google*/
+
+@font-face {
+    font-family: 'android';
+    src: url(../fontes/idroid.otf) format('opentype');
+    font-weight: normal;
+    /* fonte baixada*/
+}
+
+:root{
+   --cor0: #c5ebd6;
+   --cor1: #83e5ad;
+   --cor2: #3ddc84;
+   --cor3: #2fa866;
+   --cor4: #1a5c37;
+   --cor5: #063d1e;
+
+   --fonte-padrao/*do propeio progrma*/: arial, verdana, helvetica, sans-serif;
+   --fonte-destaque/*google*/: 'Bebas Neue', sans-serif;
+   --font-android/* baixada*/: 'android', sans-serif;
+    
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+
+
+body {
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+    
+
+}
+
+a.externo::after/*pseudoclase, serve para apresentar algo depos do paragrafo*/{
+    content: '\00A0\1F517'; /*colocar os emojis nos links*/
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));/* criar o degrader de cipa para baixo(bottom)*/
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+    
+}
+
+header > h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+   margin-bottom: 20px;
+   font-size: 3em;
+   font-weight: normal;
+   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267) /*1° projeção para baixo, 2° projeção lateral para o lado doreito se for valor positivo,3° espalhamento, 4° cor*/;
+}
+
+header > p {
+    font-family: var(--fonte-destaque);
+    font-size: 1.2em;
+    color: white;
+    max-width: 500px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    margin: auto;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.315)
+}
+
+nav {
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.362);
+    ;
+    font-weight: bold;
+    font-size: 1em;
+    
+}
+nav a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+
+}
+
+nav > a:hover {
+    background-color: var(--cor3);
+    color: var(--cor5); /* dar atenção para isso*/
+    transition-duration: 1s; /* usar para dar alguns segudo de transição para animação*/
+}
+
+main {
+    background-color: white;
+    padding: 30px;
+    min-width: 300px;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.408); /* criar sombra do main*/
+    border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+    
+}
+
+main h1 {
+    color: var(--cor5);
+    font-family: var(--font-android);
+    font-weight: normal;
+    font-size: 1.8em;
+
+}
+main h2 {
+    color: var(--cor4);
+    font-family: var(--font-android);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor0), white);/* degrade*/
+    text-indent: 10px;
+    font-weight: normal;
+
+} 
+
+main p {
+    margin: 15px 0px ;
+    text-align: justify;
+    text-indent: 30px /* aquele espaço do par.*/;
+    line-height: 2em; /* deixa um espaço entre as linha do paragrafo*/
+    font-size: 1em;
+}
+
+main a{
+    color: var(--cor5);
+    font-weight: bold;
+    text-decoration: none;/* tirar o sublinhado do link*/
+    padding: 2px 6px;
+    
+    
+}
+
+main a:hover{
+    text-decoration: underline;/* adiciona underline ao link quando se passa o mause por cima*/
+    color: var(--cor4); /* dar atençao para isso*/
+    background-color: var(--cor2);
+    border-radius: 5px 0px 5px 0px;
+    transition-duration: .3s;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.267);
+}
+
+main strong{
+    color: var(--cor4);
+    font-weight: bold;
+}
+
+main img {
+    width: 100%;
+}
+
+main img.pequena{
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+aside{
+    background-color: var(--cor0);
+    text-align: justify;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.342);
+}
+aside > h3{
+    color: white;
+    background-color: var(--cor3);
+    padding: 10px;
+    margin: -20px -20px 0px -20px; /*aq colocou valores negativos para que ambas as caixar parececem ser um único bloco, h3 ficou com cima(mas dentro) de aside */
+    border-radius: 20px 20px 0px 0px;
+   
+}
+
+aside > ul{
+    list-style-type: '\1F5F8\00A0\00A0'; /* colocar emojis nas lista no html de forma pratica, 00A0 ou 0020 serve para dar espaço, não é compatível com todos os tipos de navegadores*/
+    list-style-position: inside; /* aqui é para botar para dentro oq ficar para fora*/
+    columns: 2; /* para dividir colunas*/
+}
+
+div.video{
+    background-color: var(--cor5);
+    margin-bottom: 30px;
+    margin: 0px -30px 30px -30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.408);
+    padding: 20px;
+    padding-bottom: 59%;
+    position: relative;
+}
+
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+footer {
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+    
+}
+
+footer a {
+    color: white;
+    font-weight: bold; /* deixa a letra mais gorda*/
+    text-decoration: none;
+
+
+}
+
+footer a:hover{
+    text-decoration: underline;
+    padding: 10px;
+    color: var(--cor0);
+    background-color: var(--cor3);
+    transition-duration: .2s;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    
+}
